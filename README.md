@@ -134,7 +134,7 @@ Example for an image with a single bounding box:
 1. **Clone YOLOv8 Repository**:
    
    - Clone the YOLOv8 repository from GitHub:
-     ```bash
+     ```
      git clone https://github.com/ultralytics/yolov8.git
      cd yolov8
      ```
@@ -142,7 +142,7 @@ Example for an image with a single bounding box:
 2. **Install YOLOv8**:
 3. 
    - Install YOLOv8 and its dependencies:
-     ```bash
+     ```
      pip install -r requirements.txt
      pip install -e .
      ```
@@ -168,7 +168,7 @@ Example for an image with a single bounding box:
    
    - Run the YOLOv8 training script with your custom configuration:
      ```bash
-     python train.py --img 640 --batch 16 --epochs 50 --data data.yaml --cfg yolov8s.yaml --weights '' --name yolov8_custom
+    yolo train model=yolov8n.pt data=data.yaml epochs=50 imgsz=640
      ```
    - The script will start training the model on your custom dataset.
 
@@ -209,13 +209,16 @@ Example for an image with a single bounding box:
 
 1. **Run Inference**:
    
-   - To detect objects in new images, use the trained YOLOv8 model:
-     ```bash
-     python detect.py --weights yolov8_custom/best.pt --img 640 --conf 0.25 --source /path/to/images
+   To detect objects in new images, use the trained YOLOv8 model:
+   
      ```
-   - The model will output images with bounding boxes drawn around detected objects.
+    yolo predict model=path/to/best_model.pt source=path/to/image_or_video
+   
+     ```
+     
+   The model will output images with bounding boxes drawn around detected objects.
 
-2. **Visualize Results**:
+3. **Visualize Results**:
    - Visualize or save the images with detections. YOLOv8 outputs the confidence score for each detected object, which can be displayed on the bounding boxes.
 
 

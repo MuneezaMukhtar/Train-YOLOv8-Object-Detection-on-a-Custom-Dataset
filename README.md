@@ -35,15 +35,6 @@ Before starting, ensure your system meets the following requirements:
        yolov8-env\Scripts\activate
        ```
 
- **Install Dependencies**:
-   
-   - Upgrade pip and install necessary packages:
-     ```bash
-     pip install --upgrade pip
-     pip install torch torchvision torchaudio
-     pip install opencv-python-headless matplotlib
-     ```
-
 #### **Labeling Dataset with LabelImg**
 Labeling your dataset is a critical step for training the YOLOv8 model. LabelImg is a popular tool for creating annotations.
 

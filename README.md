@@ -3,7 +3,7 @@
 
 #### **Introduction**
 
-YOLOv8 (You Only Look Once version 8) is the latest iteration of the YOLO series, known for its balance between speed and accuracy in object detection tasks. Training a YOLOv8 model on a custom dataset involves several stages: preparing the dataset, setting up the environment, configuring the model, and training it. This detailed guide will walk you through each step.
+YOLOv8 (You Only Look Once version 8) is the latest iteration of the YOLO series, known for its balance between speed and accuracy in object detection tasks. Training a YOLOv8 model on a custom dataset involves several stages: preparing the dataset, setting up the environment, configuring the model, and training it. 
 
 
 #### **System Requirements**

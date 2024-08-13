@@ -210,7 +210,7 @@ Example for an image with a single bounding box:
 1. **Run Inference**:
    
    To detect objects in new images, use the trained YOLOv8 model:
-   
+
      ```
     yolo predict model=path/to/best_model.pt source=path/to/image_or_video
    

@@ -166,14 +166,21 @@ Example for an image with a single bounding box:
 
 1. **Start Training**:
    
-   - Run the YOLOv8 training script with your custom configuration:
-     ```bash
+   Run the YOLOv8 training script with your custom configuration:
+     
+     ```
     yolo train model=yolov8n.pt data=data.yaml epochs=50 imgsz=640
      ```
-   - The script will start training the model on your custom dataset.
+     
+   The script will start training the model on your custom dataset.
 
 2. **Monitor Training**:
-   - Training logs will display metrics like loss, accuracy, and learning rate. Monitor these metrics to ensure the model is learning correctly.
+   
+   Training logs will display metrics like loss, accuracy, and learning rate. Monitor these metrics to ensure the model is learning correctly.
+
+# F1 CURVE
+
+![F1_curve](https://github.com/user-attachments/assets/76f0b508-8c15-4fef-ad20-1a6ca962c56b)
 
 
 #### **Monitor Training**
@@ -187,6 +194,16 @@ Example for an image with a single bounding box:
    
    - Implement early stopping if the model begins to overfit (i.e., performance on the validation set worsens while training performance improves). Early stopping will halt training when improvements are minimal.
 
+# Confusion Matrix
+
+![confusion_matrix](https://github.com/user-attachments/assets/b3955681-61e5-4fec-9faf-bdd50e27ebdc)
+
+![P_curve](https://github.com/user-attachments/assets/8ff3fb8a-96ac-4270-9c81-fbef2bdf11ce)
+
+![R_curve](https://github.com/user-attachments/assets/d298820b-85cd-4156-b255-252cc969530c)
+
+![PR_curve](https://github.com/user-attachments/assets/0b3d2121-965c-48ae-8afa-8640741f7627)
+
 
 #### **Evaluate and Test**
 
@@ -199,10 +216,15 @@ Example for an image with a single bounding box:
    
    - Once satisfied with validation results, evaluate the model on a separate test set. The test set should include data the model hasn't seen during training.
    - Use the following command:
-     ```bash
+     
+     ```
      python val.py --weights yolov8_custom/best.pt --data data.yaml
      ```
    - Analyze the output metrics to understand the model's real-world performance.
+     
+  
+   ![results](https://github.com/user-attachments/assets/6496fe74-3264-43e1-8a3e-3f5c8099a7e1)
+
 
 
 #### **Inference**
@@ -217,9 +239,17 @@ Example for an image with a single bounding box:
      ```
      
    The model will output images with bounding boxes drawn around detected objects.
+   
+
+   ![val_batch2_labels](https://github.com/user-attachments/assets/e9cb5a59-7bc1-4ac7-a511-6d93fc20638d)
+   
 
 3. **Visualize Results**:
    - Visualize or save the images with detections. YOLOv8 outputs the confidence score for each detected object, which can be displayed on the bounding boxes.
+   
+
+   ![val_batch2_pred](https://github.com/user-attachments/assets/000712cc-c7b7-4ff2-ae7e-1cc79ba7cbef)
+
 
 
 #### **How It Works**
